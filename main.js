@@ -11,7 +11,7 @@ Kết quả lương
 */
 
 document.getElementById("btnIncome").onclick = function () {
-    var incomeDay = document.getElementById("incomeDay").value;
+    var incomeDay = 100000;
     var dayWork = document.getElementById("dayWork").value * 1;
     // Xử lý
     var resultMoney = incomeDay * dayWork;
@@ -21,7 +21,7 @@ document.getElementById("btnIncome").onclick = function () {
     var showIncome =
         "<p class='alert alert-success'>Lương tháng là: " +
         formatIncome.format(resultMoney) +
-        "VND" +
+        " VND" +
         "</p>";
     // Show
     document.getElementById("resultIncome").innerHTML = showIncome;
