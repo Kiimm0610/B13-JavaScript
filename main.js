@@ -56,3 +56,28 @@ document.getElementById("btnTotalNumber").onclick = function () {
     // Show
     document.getElementById("resultTotalNumber").innerHTML = resultTbNumber;
 };
+
+/**
+Mô hình 3 khối chuyển đổi tiền
+*.* Đầu vào
+Tỉ giá tiền USD 
+Số USD muốn đổi
+Số tiền USD đổi quy đổi sang VND
+*.* Xử lý
+1 USD = 23.500 VND
+Số tiền USD đổi quy đổi sang VND = Số USD muốn đổi * Tỉ giá tiền USD
+*.* Đầu ra
+Kết quả USD đổi quy đổi sang VND 
+ */
+
+document.getElementById("btnChangeMoney").onclick = function() {
+    var USD = 23500;
+    var usdMoney = document.getElementById("usdMoney").value * 1;
+    // FormatUSD
+    var formatUSD = new Intl.NumberFormat("vn-Vn");
+    // xử lý
+    var resultUsd = USD * usdMoney;
+    var showUsd = "<p class='alert alert-success'> Số tiền được quy đổi là: " + formatUSD.format(resultUsd) + " VND" + "</p>";
+    // Show
+    document.getElementById("resultChangeMoney").innerHTML = showUsd;
+}
